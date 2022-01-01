@@ -1,0 +1,58 @@
+GET http://localhost:5000/api/produits 
+###
+
+POST http://localhost:5000/api/produits HTTP/1.1
+Content-Type: application/json
+
+{
+    
+	"name":"samsung s6" ,
+	"category":"smartphone",
+	"stock":10
+	
+
+}
+
+###
+GET http://localhost:5000/api/produits/61af363cb9a253330e81597e
+
+
+###
+PATCH http://localhost:5000/api/produits/61af363cb9a253330e81597e  HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "category": "smart"
+}
+
+
+###
+Post http://localhost:5000/signup HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "email": "mhiri@mhiri.com",
+	"password": "idriss"
+}
+
+
+
+###
+
+
+Post http://localhost:5000/login HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "email": "test@test.com",
+	"password": "azerty"
+}
+
+
+###
+
+
+Get http://localhost:5000/private/secret?token=(le token qu 'on a réçu de l'avoir suite à l'ancienne req)

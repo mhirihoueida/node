@@ -18,22 +18,22 @@ export const postTest = (req,res) => {
 // la fonction pour ajouter un produit 
 export const addProduit = async(req,res) =>{
     const produit = new ProduitModel(req.body)
-/* helpers.js pour remplacer le try /catch par par la fonction globale catchErrors 
-
-
-    try{
-        //mongoose gére la sevgarde dans la base de données 
-        await produit.save()
-        //voir ce que mongoose a envoyé 
-        res.send (produit )
-    }catch(err) {
-        //si jamais ça marche pas , ça nous envoie err
-        res.status(500).send(err)
+//helpers.js pour remplacer le try /catch par par la fonction globale catchErrors 
+try{
+    //mongoose gére la sevgarde dans la base de données 
+    await produit.save()
+    //voir ce que mongoose a envoyé 
+    res.send (produit )
+}catch(err) {
+    //si jamais ça marche pas , ça nous envoie err
+    res.status(500).send(err)
 
 
 
-    }*/
 }
+
+   
+} 
 //la fonction pour lire toutes les produits 
 
 export const getProduits = async(req,res) => {

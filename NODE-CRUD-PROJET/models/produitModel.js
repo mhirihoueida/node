@@ -34,7 +34,7 @@ const ProduitSchema = new mongoose.Schema({
 })
 
 // le modele(un model utilise un shéma)
-const Produit = mongoose.model('Produit',ProduitSchema)
+const ProduitModel = mongoose.model('Produit',ProduitSchema)
 
 // exporter notre modele 
-export default Produit
+export default ProduitModel

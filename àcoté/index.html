@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet</title>
+</head>
+<body>
+    <h1>bonjour mon premier site d'E-commerce</h1>
+</body>
+</html>
+<ProduitForm id={id} produit={produit} setProduit={setProduit} /> <ProduitForm id={id} produit={produit} setProduit={setProduit} />
+
+
+
+
+passport.use(
+    new JWTStrategy(
+        {   
+            secretOrkey: 'mot_de_passe',
+            jwtFromRequest: ExtractJwt.fromUrlQueryParameter('token')
+        },
+        async (token, done) => {
+            try{
+                return done(null, token.user)
+            } catch(error) {
+              done(error)  
+            }
+        }
+    )
+)
+
+
+
+//routes.js 
+const token = jwt.sign({ user:body }, 'mot_de_passe')
